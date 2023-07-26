@@ -1,10 +1,11 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { PrivateRoutes, PublicRoutes, Roles } from '../../models';
-import { createUser, resetUser, UserKey } from '../../redux/states/user';
-import { getMorty } from '../../services';
-import { clearLocalStorage } from '../../utilities';
+
+import { clearLocalStorage } from '@/utilities';
+import { getMorty } from '@/services';
+import { PrivateRoutes, PublicRoutes, Roles } from '@/models';
+import { UserKey, createUser, resetUser } from '@/redux/states/user';
 
 function Login() {
     const dispatch = useDispatch();
